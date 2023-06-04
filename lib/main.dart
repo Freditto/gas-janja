@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gas_janja/navigator.dart';
+import 'package:gas_janja/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
        
       ),
-      home: NavigatorWidget(),
+      home: SplashScreen(),
     );
   }
 }
