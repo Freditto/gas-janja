@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gas_janja">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    
    <application
         android:label="gas_janja"
         android:name="${applicationName}"

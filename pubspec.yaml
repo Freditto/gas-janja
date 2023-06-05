@@ -46,6 +46,9 @@ dependencies:
   syncfusion_flutter_gauges: ^20.4.50
 
   flutter_mute: ^0.0.4
+  flutter_social_button: ^1.1.4+1
+
+  flutter_offline: ^2.1.0
 
 dev_dependencies:
   flutter_test:
