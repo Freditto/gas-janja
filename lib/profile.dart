@@ -2,6 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:gas_janja/about.dart';
+import 'package:gas_janja/complain.dart';
+import 'package:gas_janja/contact.dart';
+import 'package:gas_janja/developer.dart';
+import 'package:gas_janja/feedback.dart';
+import 'package:gas_janja/help.dart';
 import 'package:gas_janja/login.dart';
 import 'package:gas_janja/terms.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -16,8 +21,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   @override
   void initState() {
-    checkLoginStatus();
-    _getUserInfo();
+    // checkLoginStatus();
+    // _getUserInfo();
     // _getProfileInfo();
 
     //listenNotifications();
@@ -171,7 +176,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ),
 
-              const SizedBox(height: 20.0),
+              // const SizedBox(height: 20.0),
 
               // userData == null
               //     ? const Text("",
@@ -187,6 +192,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
               //         ),
               //       ),
               const SizedBox(height: 30.0),
+
+              InkWell(
+
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ContactScreen()));
+                },
+                child: CustomListTile(
+                  "Contacts",
+                  Icons.group_outlined,
+                  Icons.keyboard_arrow_right_outlined,
+                ),
+              ),
 
               InkWell(
 
@@ -211,10 +229,62 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   Icons.keyboard_arrow_right_outlined,
                 ),
               ),
-              CustomListTile(
-                "Developer",
-                Icons.settings,
-                Icons.keyboard_arrow_right_outlined,
+              InkWell(
+
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => FeedbackScreen()));
+                },
+                child: CustomListTile(
+                  "Feedback",
+                  Icons.feedback_outlined,
+                  Icons.keyboard_arrow_right_outlined,
+                ),
+              ),
+              InkWell(
+
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => ComplainScreen()));
+                },
+                child: CustomListTile(
+                  "Complains",
+                  Icons.add_task,
+                  Icons.keyboard_arrow_right_outlined,
+                ),
+              ),
+              InkWell(
+
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => HelpScreen()));
+                },
+                child: CustomListTile(
+                  "Help",
+                  Icons.help_center_outlined,
+                  Icons.keyboard_arrow_right_outlined,
+                ),
+              ),
+
+              InkWell(
+
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => DeveloperScreen()));
+                },
+                child: CustomListTile(
+                  "Developer",
+                  Icons.developer_board,
+                  Icons.keyboard_arrow_right_outlined,
+                ),
               ),
               // SwitchListTile(
               //   value: _darkMode,

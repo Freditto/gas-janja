@@ -9,7 +9,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   void _moveToHome() async {
     await Future.delayed(
-      Duration(seconds: 2),
+      Duration(seconds: 5),
     );
     Navigator.pushAndRemoveUntil(
         context,
@@ -35,10 +35,16 @@ class _SplashScreenState extends State<SplashScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              Image.asset(
-                'assets/gaslogo.png',
-                width: 200,
-                height: 200,
+              Center(
+                child: Image.asset(
+                  'assets/gaslogo.png',
+                  width: 200, // set the desired width
+                  height: 200, // set the desired height
+                ),
+              ),
+
+              SizedBox(
+                height: 30,
               ),
               Text(
                 "GasJanja",

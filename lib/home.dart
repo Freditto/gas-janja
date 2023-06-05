@@ -17,8 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    checkLoginStatus();
-    _getUserInfo();
+    // checkLoginStatus();
+    // _getUserInfo();
 
     //listenNotifications();
     super.initState();

@@ -26,8 +26,8 @@ class _NavigatorWidgetState extends State<NavigatorWidget> {
 
   @override
   void initState() {
-    checkLoginStatus();
-    _getUserInfo();
+    // checkLoginStatus();
+    // _getUserInfo();
 
     //listenNotifications();
     super.initState();
